@@ -4,13 +4,11 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-enum TypeOfVacation { Business, Private }
-
 public class Booking {
 
     private LocalDate startDate;
     private LocalDate endDate;
-    TypeOfVacation typeOfVacation;
+    private TypeOfVacation typeOfVacation;
     private Guest guest;
     private List<Guest> otherGuests = new ArrayList<>();
     private Room room;
@@ -24,7 +22,7 @@ public class Booking {
     }
 
     public Booking(Guest guest, Room room) {
-        this(LocalDate.now(), LocalDate.now().plusDays(6), TypeOfVacation.Business, guest, room);
+        this(LocalDate.now(), LocalDate.now().plusDays(6), TypeOfVacation.BUSINESS, guest, room);
     }
 
     public LocalDate getStartDate() {
