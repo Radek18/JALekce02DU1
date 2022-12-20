@@ -2,8 +2,6 @@ package com.engeto.Lekce02DU1;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
 
@@ -36,14 +34,13 @@ public class Main {
         booking3.addGuest(guest1);
         booking3.addGuest(guest3);
 
-        List<Booking> bookings = new ArrayList<>();
-        bookings.add(booking1);
-        bookings.add(booking2);
-        bookings.add(booking3);
+        ListOfBookings bookings = new ListOfBookings();
+        bookings.addBooking(booking1);
+        bookings.addBooking(booking2);
+        bookings.addBooking(booking3);
 
         System.out.println();
-
-        for (Booking booking : bookings) {
+        for (Booking booking : bookings.getBookings()) {
             System.out.println("Termín: " + booking.getStartDate().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + " - "
                     + booking.getEndDate().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + ", "
                     + "Pokoj č. " + booking.getRoom().getNumber() + ", "
