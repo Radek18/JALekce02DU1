@@ -22,7 +22,7 @@ public class Booking {
     }
 
     public Booking(Guest guest, Room room) {
-        this(LocalDate.now(), LocalDate.now().plusDays(6), TypeOfVacation.BUSINESS, guest, room);
+        this(LocalDate.now(), LocalDate.now().plusDays(6), TypeOfVacation.PRIVATE, guest, room);
     }
 
     public LocalDate getStartDate() {
@@ -57,8 +57,15 @@ public class Booking {
         this.guest = guest;
     }
 
-    public List<Guest> getOtherGuests() {
-        return otherGuests;
+    public String getOtherGuests() {
+        String result = "";
+        if (otherGuests.size() > 0) {
+            result += "Další hosté: ";
+            for (Guest guest : otherGuests) {
+                result += guest.getName() + " " + guest.getSurname() + ", ";
+            }
+        }
+        return result;
     }
 
     public void setOtherGuests(List<Guest> otherGuests) {

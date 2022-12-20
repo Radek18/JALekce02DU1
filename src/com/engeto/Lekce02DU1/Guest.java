@@ -40,12 +40,7 @@ public class Guest {
     }
 
     public String getDescription() {
-        return "Jméno a příjmení: " + name + " " + surname + ", Datum narození: " + dateOfBirth.format(DateTimeFormatter.ofPattern("dd. MM. yyyy"));
-    }
-
-    @Override
-    public String toString() {
-        return name + " " + surname;
+        return "Jméno a příjmení: " + name + " " + surname + ", Datum narození: " + dateOfBirth.format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + ", ";
     }
 
 }

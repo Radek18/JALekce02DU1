@@ -7,6 +7,7 @@ public class Room {
     private boolean isBalcony;
     private boolean isSeaView;
     private int pricePerNight;
+
     public Room(int number, int numberOfBeds, boolean isBalcony, boolean isSeaView, int pricePerNight) {
         this.number = number;
         this.numberOfBeds = numberOfBeds;
@@ -56,11 +57,11 @@ public class Room {
     }
 
     public String getDescription() {
-        String result = "Číslo pokoje: " + number + ", Počet postelí: " + numberOfBeds + ", Cena za noc: " + pricePerNight + " Kč";
-        if (getIsBalcony()) result += ", S balkonem";
-        else result += ", Bez balkonu";
-        if (getIsSeaView()) result += ", S výhledem na moře";
-        else result += ", Bez výhledu na moře";
+        String result = "Číslo pokoje: " + number + ", Počet postelí: " + numberOfBeds + ", Cena za noc: " + pricePerNight + " Kč, ";
+        if (getIsBalcony()) result += "S balkonem, ";
+        else result += "Bez balkonu, ";
+        if (getIsSeaView()) result += "S výhledem na moře, ";
+        else result += "Bez výhledu na moře, ";
         return result;
     }
 

@@ -44,12 +44,12 @@ public class Main {
         System.out.println();
 
         for (Booking booking : bookings) {
-            System.out.println("Termín: " + booking.getStartDate().format(DateTimeFormatter.ofPattern("dd. MM. yyyy")) + " - "
-                    + booking.getEndDate().format(DateTimeFormatter.ofPattern("dd. MM. yyyy")) + ", "
+            System.out.println("Termín: " + booking.getStartDate().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + " - "
+                    + booking.getEndDate().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + ", "
                     + "Pokoj č. " + booking.getRoom().getNumber() + ", "
                     + "Typ pobytu: " + booking.getTypeOfVacation() + ", "
                     + "Host: " + booking.getGuest().getName() + " " + booking.getGuest().getSurname() + ", "
-                    + "Další hosté: " + booking.getOtherGuests()
+                    + booking.getOtherGuests()
             );
         }
 
